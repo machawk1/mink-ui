@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mink UI</title>
+        <link rel="stylesheet" href="./mink-ui.css">
+        <style>
+            aggregation-source[data-type="private"] src-name:after {content: "🔒 "; font-size: 12px;}
+        </style>
+        <script src="./mink-ui.js"></script>
+    </head>
+    <body>
+        <mink-container>
+            <precedence-box>
+                <aggregation-source data-type="private">
+                    <src-name>Alice's Archive @ localhost:8080</src-name>
+                </aggregation-source>
+                <aggregation-source data-type="private">
+                    <src-name>Carol's Archive</src-name>
+                </aggregation-source>
+            </precedence-box>
+            <precedence-box>
+                <aggregation-source title="https://memgator@cs.odu.edu/timemap/*">
+                    <src-name>Aggregator @ ODUCS</src-name>
+                    <aggregation-source draggable="true" ondragover="dragOver(event)" ondragstart="dragStart(event)">
+                        <src-count>469</src-count>
+                        <src-name>Internet Archive</src-name>
+                    </aggregation-source>
+                    <aggregation-source>
+                        <src-count>1</src-count>
+                        <src-name>UK Web Archive</src-name>
+                    </aggregation-source>
+                    <aggregation-source>
+                        <src-count>54</src-count>
+                        <src-name>archive.today</src-name>
+                    </aggregation-source>
+                    <aggregation-source>
+                        <src-count>59</src-count>
+                        <src-name>Archive-It</src-name>
+                    </aggregation-source>
+                    <aggregation-source>
+                        <src-count>1</src-count>
+                        <src-name>Perma Archive</src-name>
+                    </aggregation-source>
+                </aggregation-source>
+            </precedence-box>
+            <precedence-box>
+                <aggregation-source>
+                    <src-name>Freedonia Archive</src-name>
+                </aggregation-source>
+            </precedence-box>
+            <precedence-box>
+                <aggregation-source>
+                    <src-name>Bob's Archive</src-name>
+                </aggregation-source>
+                <aggregation-source data-disabled="true">
+                    <src-name>Aggregator @ mementoweb.org</src-name>
+                </aggregation-source>
+                <aggregation-source data-disabled="true">
+                    <src-name>Aggregator @ localhost:1208</src-name>
+                </aggregation-source>
+            </precedence-box>
+            <source-loader>
+                <label>Config:</label>
+                <button>Load</button>
+                <button>Edit</button>
+                <button>Save</button>
+            </source-loader>
+        </mink-container>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+body {font-family: sans-serif; font-size: 14px;}
+mink-container {border: 1px solid #999; display: inline-block;width: 400px;}
+precedence-box {border: 1px solid #333; padding-bottom: 0; display: block; border-bottom: 3px double black; }
+aggregation-source {display: block;}
+aggregation-source:hover {cursor: pointer;}
+aggregation-source > aggregation-source {display: block;}
+src-count::after {content: ": ";}
+mink-container > precedence-box > aggregation-source > src-name {line-height: 18px; padding-left: 0.25em; width: 100%; display: block;}
+src-name {width: 100%;}
+src-name:hover {color: red;}
+aggregation-source[data-disabled="true"] src-name:hover {color: blue; cursor: help;}
+src-count {margin-left: 0.5em; width: 30px; display: inline-block; text-align: right;}
+mink-container precedence-box:nth-child(n+1) {border-left: 15px solid #ffa451;}
+mink-container precedence-box:nth-child(n+2) {border-left: 15px solid #003bea;}
+mink-container precedence-box:nth-child(n+3) {border-left: 15px solid #ffa451;}
+mink-container precedence-box:nth-child(n+4) {border-left: 15px solid green;}
+aggregation-source > aggregation-source:nth-child(2) {background-image: linear-gradient(to right, #ebcde1, white);}
+aggregation-source > aggregation-source:nth-child(3) {background-image: linear-gradient(to right, #ffe0c9, white);}
+aggregation-source > aggregation-source:nth-child(4) {background-image: linear-gradient(to right, #ffcdc9, white);}
+aggregation-source > aggregation-source:nth-child(5) {background-image: linear-gradient(to right, #e7f7ea, white);}
+aggregation-source > aggregation-source:nth-child(6) {background-image: linear-gradient(to right, #f0f0f0, white);}
+
+aggregation-source[data-disabled="true"] src-name {color: #aaa;}
+source-loader {background-color: #c5cef7; text-align: center; display: block; width: 100%; border: 0;}
