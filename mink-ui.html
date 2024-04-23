@@ -16,7 +16,8 @@
                 const el = document.querySelector('mink-container');
                 let sortable = Sortable.create(el,{
                     handle: 'aggregation-source'
-                });
+                })
+                document.querySelector('#sanityCheck').addEventListener('click', sanityCheck)
             })
         </script>
     </head>
@@ -80,7 +81,7 @@
         </mink-container>
         <br />
         <extended-settings>
-            <button>Sanity Check</button>
+            <button id="sanityCheck">Sanity Check</button>
             <button title="toggle accessibility">♿</button>
         </extended-settings>
     </body>
