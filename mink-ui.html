@@ -5,20 +5,32 @@
         <link rel="stylesheet" href="./mink-ui.css">
         <style>
             aggregation-source[data-type="private"] src-name:after {content: "🔒 "; font-size: 12px;}
+            extended-settings {margin-top: 1.0em; display: block;}
+            extended-settings button {background-color: white; border: 0; text-decoration: underline;}
+            extended-settings button:hover {color: red; cursor: pointer;}
         </style>
         <script src="./mink-ui.js"></script>
+        <script src="./Sortable.min.js"></script>
+        <script>
+            window.addEventListener('load', function () {
+                const el = document.querySelector('mink-container');
+                let sortable = Sortable.create(el,{
+                    handle: 'aggregation-source'
+                });
+            })
+        </script>
     </head>
     <body>
         <mink-container>
-            <precedence-box>
+            <precedence-box class="nested-1">
                 <aggregation-source data-type="private">
-                    <src-name>Alice's Archive @ localhost:8080</src-name>
+                    <src-name class="handle">Alice's Archive @ localhost:8080</src-name>
                 </aggregation-source>
                 <aggregation-source data-type="private">
                     <src-name>Carol's Archive</src-name>
                 </aggregation-source>
             </precedence-box>
-            <precedence-box>
+            <precedence-box class="nested-1">
                 <aggregation-source title="https://memgator@cs.odu.edu/timemap/*">
                     <src-name>Aggregator @ ODUCS</src-name>
                     <aggregation-source draggable="true" ondragover="dragOver(event)" ondragstart="dragStart(event)">
@@ -43,12 +55,12 @@
                     </aggregation-source>
                 </aggregation-source>
             </precedence-box>
-            <precedence-box>
+            <precedence-box  class="nested-1">
                 <aggregation-source>
                     <src-name>Freedonia Archive</src-name>
                 </aggregation-source>
             </precedence-box>
-            <precedence-box>
+            <precedence-box  class="nested-1">
                 <aggregation-source>
                     <src-name>Bob's Archive</src-name>
                 </aggregation-source>
@@ -66,5 +78,10 @@
                 <button>Save</button>
             </source-loader>
         </mink-container>
+        <br />
+        <extended-settings>
+            <button>Sanity Check</button>
+            <button title="toggle accessibility">♿</button>
+        </extended-settings>
     </body>
 </html>
