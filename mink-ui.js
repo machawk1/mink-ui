@@ -35,3 +35,19 @@ function sanityCheck () {
     console.log(`Step ${i+1}: Query ${srcs.length} sources ${dString}`)
   }
 }
+
+async function fetchDataSource (src) {
+  // https://oduwsdl.github.io/MemGator/archives.json
+  const resp = await fetch(src)
+  const archs = await resp.json()
+  convertJsonToArchives(archs)
+}
+
+function convertJsonToArchives (jsonSrc) {
+  console.log(typeof jsonSrc)
+
+  let root = document.createElement('mink-container')
+  for (let a in jsonSrc) {
+    console.log(jsonSrc[a])
+  }
+}

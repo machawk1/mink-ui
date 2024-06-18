@@ -18,6 +18,9 @@
                     handle: 'aggregation-source'
                 })
                 document.querySelector('#sanityCheck').addEventListener('click', sanityCheck)
+                document.querySelector('#fetch').addEventListener('click', function () {
+                    fetchDataSource('https://oduwsdl.github.io/MemGator/archives.json')
+                })
             })
         </script>
     </head>
@@ -83,6 +86,7 @@
         <extended-settings>
             <button id="sanityCheck">Sanity Check</button>
             <button title="toggle accessibility">♿</button>
+            <button id="fetch" title="fetch">Fetch</button>
         </extended-settings>
     </body>
 </html>

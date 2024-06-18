@@ -1,0 +1,54 @@
+[
+    {
+        {
+            "id": "alices-archive",
+            "name": "Alice's Archive @ localhost:8080",
+            "timemap": "http://localhost:8080/timemap/link/"
+        },
+        {
+            "id": "carols-archive",
+            "name": "Carol's Archive",
+            "timemap": "http://carol.local/timemap/link/"
+        }
+    },
+    "Aggregator @ ODUCS": 
+    {
+        {
+            "id": "internet-archive",
+            "name": "Internet Archive",
+            "timemap": "http://web.archive.org/timemap/link/"
+        },
+        {
+            "id": "uk-web-archive",
+            "name": "UK Web Archive",
+            "timemap": "https://webarchive.nationalarchives.gov.uk/timemap/link/"
+        },
+        {
+            "id": "archive-today",
+            "name": "archive.today",
+            "timemap": "https://archive.today/timemap/link/"
+        },
+        {
+            "id": "archive-it",
+            "name": "Archive-It",
+            "timemap": "https://www.archive-it.org/timemap/link/"
+        },
+        {
+            "id": "perma-archive",
+            "name": "Perma Archive",
+            "timemap": "https://perma.cc/timemap/link/"
+        }
+    },
+    {
+        "id": "freedonia-archive",
+        "name": "Freedonia Archive",
+        "timemap": "https://freedonia.ftw/timemap/link/"
+    },
+    {
+        {
+            "id": "bobs-archive",
+            "name": "Bob's Archive",
+            "timemap": "https://bob.com/timemap/link/"
+        }
+    }
+]
