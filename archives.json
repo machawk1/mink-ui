@@ -49,6 +49,16 @@
             "id": "bobs-archive",
             "name": "Bob's Archive",
             "timemap": "https://bob.com/timemap/link/"
-        }
+        },
+        {
+            "id": "aggregator-mementoweb",
+            "name": "Aggregator @ mementoweb.org",
+            "timemap": "https://mementoweb.org/timemap/link/"
+        },
+        {
+            "id": "aggregator-localhost",
+            "name": "Aggregator @ localhost:1208",
+            "timemap": "https://localhost:1208/timemap/link/"
+        },
     }
 ]
