@@ -8,6 +8,7 @@
             extended-settings {margin-top: 1.0em; display: block;}
             extended-settings button {background-color: white; border: 0; text-decoration: underline;}
             extended-settings button:hover {color: red; cursor: pointer;}
+            footer {margin-top: 1.0em;}
         </style>
         <script src="./mink-ui.js"></script>
         <script src="./Sortable.min.js"></script>
@@ -20,6 +21,10 @@
                 document.querySelector('#sanityCheck').addEventListener('click', sanityCheck)
                 document.querySelector('#fetch').addEventListener('click', function () {
                     fetchDataSource('https://oduwsdl.github.io/MemGator/archives.json')
+                })
+
+                document.querySelectorAll('aggregation-source').forEach(function (src) {
+                    src.addEventListener('dblclick', toggleEnabled)
                 })
             })
         </script>
@@ -88,5 +93,13 @@
             <button title="toggle accessibility">♿</button>
             <button id="fetch" title="fetch">Fetch</button>
         </extended-settings>
+        <footer></footer>
+
+        <!--
+        TODO: Custom Elements won't work right unless they are imported as modules
+        <script type="module" src="./mink-container.js"></script>
+        <script type="module" src="./precedence-box.js"></script>
+        <script type="module" src="./aggregation-source.js"></script>
+
     </body>
 </html>
