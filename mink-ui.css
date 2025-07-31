@@ -20,5 +20,5 @@ aggregation-source > aggregation-source:nth-child(4) {background-image: linear-g
 aggregation-source > aggregation-source:nth-child(5) {background-image: linear-gradient(to right, #e7f7ea, white);}
 aggregation-source > aggregation-source:nth-child(6) {background-image: linear-gradient(to right, #f0f0f0, white);}
 
-aggregation-source[data-disabled="true"] src-name {color: #aaa;}
+aggregation-source[data-disabled="true"] * {color: #aaa;}
 source-loader {background-color: #c5cef7; text-align: center; display: block; width: 100%; border: 0;}
