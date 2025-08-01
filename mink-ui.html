@@ -12,22 +12,6 @@
         </style>
         <script src="./mink-ui.js"></script>
         <script src="./Sortable.min.js"></script>
-        <script>
-            window.addEventListener('load', function () {
-                const el = document.querySelector('mink-container');
-                let sortable = Sortable.create(el,{
-                    handle: 'aggregation-source'
-                })
-                document.querySelector('#sanityCheck').addEventListener('click', sanityCheck)
-                document.querySelector('#fetch').addEventListener('click', function () {
-                    fetchDataSource('https://oduwsdl.github.io/MemGator/archives.json')
-                })
-
-                document.querySelectorAll('aggregation-source').forEach(function (src) {
-                    src.addEventListener('dblclick', toggleEnabled)
-                })
-            })
-        </script>
     </head>
     <body>
         <mink-container>

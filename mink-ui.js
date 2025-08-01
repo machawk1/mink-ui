@@ -72,3 +72,23 @@ function toggleEnabled (el) {
   }
   console.log(this)
 }
+
+function showSourceInfo (e) {
+  console.log(this)
+}
+
+window.addEventListener('load', function () {
+    const el = document.querySelector('mink-container');
+    let sortable = Sortable.create(el,{
+        handle: 'aggregation-source'
+    })
+    document.querySelector('#sanityCheck').addEventListener('click', sanityCheck)
+    document.querySelector('#fetch').addEventListener('click', function () {
+        fetchDataSource('https://oduwsdl.github.io/MemGator/archives.json')
+    })
+
+    document.querySelectorAll('aggregation-source').forEach(function (src) {
+        src.addEventListener('dblclick', toggleEnabled)
+        src.addEventListener('click', showSourceInfo)
+    })
+})
